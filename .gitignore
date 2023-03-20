@@ -1,2 +1,4 @@
 src/__pycache__/
 kanji2element.json
+__pycache__/test_sample.cpython-310-pytest-7.2.2.pyc
+.vscode/settings.json

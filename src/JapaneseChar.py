@@ -7,8 +7,10 @@ class JapaneseChar:
     def __get_sjis_chars():
         chars = [chr(i) for i in range(0x20, 0x7f)]
         chars += [chr(i) for i in range(0xa1, 0xe0)]
-        sjis_first_bytes = [i for i in range(0x81, 0xa0)] + [i for i in range(0xe0, 0xf0)]
-        sjis_second_bytes = {i: (0x40, 0x7e) if i != 0x7f else None for i in sjis_first_bytes}
+        sjis_first_bytes = [i for i in range(
+            0x81, 0xa0)] + [i for i in range(0xe0, 0xf0)]
+        sjis_second_bytes = {i: (0x40, 0x7e) if i !=
+                             0x7f else None for i in sjis_first_bytes}
         sjis_second_bytes.update({i: (0x80, 0xfc) for i in range(0x40, 0x7f)})
         sjis_second_bytes.pop(0x7f, None)
         sjis_second_bytes.pop(0xa0, None)
