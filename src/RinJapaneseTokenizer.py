@@ -6,7 +6,7 @@ class RinJapaneseTokenizer:
     def __init__(self, kanji2element_path="kanji2element.json"):
         self.util = JapaneseTokenizerUtils(kanji2element_path)
 
-    def tokenize(self, text):
+    def encode(self, text):
         tokenize_splitted = []
         for i in text:
             tokenize_splitted.extend(self.util.radical_char.get_radical_chars(i))
