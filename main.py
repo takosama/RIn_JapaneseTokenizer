@@ -8,3 +8,4 @@ if __name__ == '__main__':
     print(rin_tokenizer.decode(rin_tokenizer.encode(text)))
     print(rin_tokenizer.encode(text2))
     print(rin_tokenizer.decode(rin_tokenizer.encode(text2)))
+
