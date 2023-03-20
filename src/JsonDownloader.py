@@ -14,5 +14,5 @@ class JsonDownloader:
             f.close()
 
     def download(self,kanji2element_path="kanji2element.json"):
-        url='<https://raw.githubusercontent.com/yagays/kanjivg-radical/master/data/kanji2element.json>'
+        url='https://raw.githubusercontent.com/yagays/kanjivg-radical/master/data/kanji2element.json'
         self._download_json_file(url, kanji2element_path)
