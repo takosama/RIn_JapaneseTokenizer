@@ -1,8 +1,10 @@
+from src.JsonDownloader import JsonDownloader
 from src.KanjiToRadical import KanjiToRadical
 
 
 class RadicalChar:
     def __init__(self, kanji2element_path):
+        JsonDownloader().download(kanji2element_path)
         self.kanji2element = KanjiToRadical(kanji2element_path)
         self.all_radical = set(
             [element for elements in self.kanji2element.kanji2element.values() for element in elements])

@@ -3,7 +3,7 @@ from src.JapaneseTokenizerUtils import JapaneseTokenizerUtils
 
 
 class RinJapaneseTokenizer:
-    def __init__(self, kanji2element_path="kanji2element.json"):
+    def __init__(self, kanji2element_path="../kanji2element.json"):
         self.util = JapaneseTokenizerUtils(kanji2element_path)
 
     def encode(self, text):
