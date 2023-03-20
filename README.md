@@ -1,9 +1,6 @@
 # Rin_JapaneseTokenizer
 
-[main.py](https://www.notion.so/main-py-a0662ce483784e6facc1bed5ce187057)
-
-[src](https://www.notion.so/src-ef7fb55782f94d46906b31b661d107c4)
-
+ 
 # Rin_JapaneseTokenizer
 
 This repository contains the source code for Rin_JapaneseTokenizer, a tool for tokenizing Japanese text. By using this library, Japanese text can be tokenized taking into account radicals. This can potentially result in more accurate results when inputting Japanese text into machine learning models. Currently, machine learning models often overlook radical information when simply tokenizing Japanese text, which can result in inaccurate results. However, by using this library and taking into account radicals, more accurate results can be obtained.
