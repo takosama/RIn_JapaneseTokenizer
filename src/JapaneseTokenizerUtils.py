@@ -1,6 +1,6 @@
 
+from src.RadicalChar import RadicalChar
 from src.JapaneseChar import JapaneseChar
-from RadicalChar import RadicalChar
 
 
 class JapaneseTokenizerUtils:
