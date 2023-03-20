@@ -1,0 +1,7 @@
+src/__pycache__/JapaneseChar.cpython-310.pyc
+src/__pycache__/JapaneseTokenizerUtils.cpython-310.pyc
+src/__pycache__/JsonDownloader.cpython-310.pyc
+src/__pycache__/KanjiToRadical.cpython-310.pyc
+src/__pycache__/RidicalChar.cpython-310.pyc
+src/__pycache__/RinJapaneseTokenizer.cpython-310.pyc
+kanji2element.json
