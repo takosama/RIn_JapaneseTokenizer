@@ -1,7 +1,6 @@
 # Rin_JapaneseTokenizer
 
- 
-# Rin_JapaneseTokenizer
+  
 
 This repository contains the source code for Rin_JapaneseTokenizer, a tool for tokenizing Japanese text. By using this library, Japanese text can be tokenized taking into account radicals. This can potentially result in more accurate results when inputting Japanese text into machine learning models. Currently, machine learning models often overlook radical information when simply tokenizing Japanese text, which can result in inaccurate results. However, by using this library and taking into account radicals, more accurate results can be obtained.
 
@@ -75,6 +74,8 @@ License Notice:
     ```
     
     以上のように、`JapaneseTokenizer` クラスを使用することで、日本語のテキストを簡単に部首を考慮したトークン化することができます。
+    
+    https://twitter.com/rin_sns_AI
     
     このライブラリは Rin_JapaneseTokenizer と呼ばれ、日本語のテキストを部首を考慮してトークン化するためのツールです。このライブラリを使用することで、日本語のテキストを機械学習のモデルに入力する際、より精度の高い結果を得ることができます。また、このライブラリは、[https://github.com/yagays/kanjivg-radical](https://github.com/yagays/kanjivg-radical) のファイルを自動でダウンロードし、CC-BY-SA-4.0ライセンスのファイルを使用しています。プログラム自体はMITライセンスで公開されています。
     
