@@ -13,7 +13,7 @@ class JapaneseTokenizerUtils:
     def get_all_radical_dict(self):
         all_radical_dict = set()
         a = [list(i)
-             for i in self.radical_char.kanji2element.kanji2element.values()]
+             for i in self.radical_char.kanji2element.values()]
         for i in a:
             all_radical_dict.update(i)
 
