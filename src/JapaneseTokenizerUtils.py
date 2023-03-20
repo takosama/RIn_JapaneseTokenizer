@@ -25,4 +25,4 @@ class JapaneseTokenizerUtils:
                     all_radical_dict.update(i)
 
         all_radical_dict = sorted(all_radical_dict)
-        return {j: i for i, j in enumerate(all_radical_dict)}
+        return {j: i+10 for i, j in enumerate(all_radical_dict)}
