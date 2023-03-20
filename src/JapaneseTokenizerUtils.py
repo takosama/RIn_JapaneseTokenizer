@@ -1,18 +1,16 @@
-
-from src.RadicalChar import RadicalChar
 from src.JapaneseChar import JapaneseChar
+from src.RadicalChar import RadicalChar
 
 
 class JapaneseTokenizerUtils:
     def __init__(self, kanji2element_path):
         self.radical_char = RadicalChar(kanji2element_path)
         self.japanese_char = JapaneseChar()
-        self.all_radical_dic = self.__get_all_radical_dict()
 
     def get_all_japanese_chars_list(self):
-        return self.japanese_char.get_japanese_chars()
+        return self.japanese_char.all_sjis_chars
 
-    def __get_all_radical_dict(self):
+    def get_all_radical_dict(self):
         all_radical_dict = set()
         a = [list(i)
              for i in self.radical_char.kanji2element.kanji2element.values()]

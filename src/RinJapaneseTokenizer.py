@@ -1,15 +1,16 @@
+
 from src.JapaneseTokenizerUtils import JapaneseTokenizerUtils
-from src.JsonDownloader import JsonDownloader
+
 
 class RinJapaneseTokenizer:
     def __init__(self, kanji2element_path="kanji2element.json"):
-        JsonDownloader().download(kanji2element_path)
         self.util = JapaneseTokenizerUtils(kanji2element_path)
 
     def tokenize(self, text):
         tokenize_splitted = []
-        [tokenize_splitted.extend(self.util.radical_char.get_radical_chars(i)) for i in text]
-        tokenize_splitted_nums = [self.util.all_radical_dic.get(i, -1) for i in tokenize_splitted]
+        for i in text:
+            tokenize_splitted.extend(self.util.radical_char.get_radical_chars(i))
+        tokenize_splitted_nums = [self.util.get_all_radical_dict().get(i,-1) for i in tokenize_splitted]
         return tokenize_splitted_nums
 
     def decode(self, tokens):
@@ -19,7 +20,7 @@ class RinJapaneseTokenizer:
                 text += "[UNK]"
                 continue
             #valueからkeyを取得
-            for key, value in self.util.all_radical_dic.items():
+            for key, value in self.util.get_all_radical_dict().items():
                 if value == token:
                     text += key
                     break

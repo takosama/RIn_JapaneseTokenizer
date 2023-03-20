@@ -1,4 +1,7 @@
+ 
+
 from src.RinJapaneseTokenizer import RinJapaneseTokenizer
+
 
 if __name__ == '__main__':
     text = "凜"
