@@ -1,6 +1,7 @@
 import os
 import urllib3
 
+
 class JsonDownloader:
     def __init__(self):
         pass

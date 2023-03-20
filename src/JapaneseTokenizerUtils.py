@@ -1,13 +1,28 @@
 from src.JapaneseChar import JapaneseChar
-from src.RadicalChar import DataLoader
-
-import json
+from src.RadicalChar import RadicalChar
 
 
 class JapaneseTokenizerUtils:
-    def __init__(self):
-        DataLoader().Generate_Char2Radical_json()
+    def __init__(self, kanji2element_path):
+        self.radical_char = RadicalChar(kanji2element_path)
+        self.japanese_char = JapaneseChar()
+
+    def get_all_japanese_chars_list(self):
+        return self.japanese_char.all_sjis_chars
 
     def get_all_radical_dict(self):
-        with open("char2radical.json", "r", encoding="utf-8") as f:
-            return {key: value for key, value in json.load(f).items()}
+        all_radical_dict = set()
+        a = [list(i)
+             for i in self.radical_char.kanji2element.kanji2element.values()]
+        for i in a:
+            all_radical_dict.update(i)
+
+        for i in self.get_all_japanese_chars_list():
+            if i not in all_radical_dict:
+                if len(i) == 1:
+                    all_radical_dict.add(i)
+                elif len(i) == 2:
+                    all_radical_dict.update(i)
+
+        all_radical_dict = sorted(all_radical_dict)
+        return {j: i for i, j in enumerate(all_radical_dict)}

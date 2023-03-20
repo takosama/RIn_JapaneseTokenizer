@@ -1,6 +1,6 @@
 class JapaneseChar:
     def __init__(self):
-        pass
+        self.all_sjis_chars = self.__get_japanese_chars()
 
     @staticmethod
     def __get_sjis_chars():
@@ -28,7 +28,7 @@ class JapaneseChar:
         chars += [chr(i) for i in range(0x30a1, 0x30f4)]
         return chars
 
-    def get_japanese_chars(self):
+    def __get_japanese_chars(self):
         japanese_chars = set(self.__get_sjis_chars()) | set(
             self.__get_additional_chars())
         return japanese_chars
